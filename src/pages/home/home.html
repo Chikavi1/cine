@@ -1,0 +1,61 @@
+<ion-header  no-border>
+  <ion-navbar color="fondo-cut" >
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+       <button ion-button menuToggle >
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-col>
+      <ion-col>
+       <ion-title>
+        CineCut
+      </ion-title>
+      </ion-col>
+      <ion-col>
+       
+   <ion-buttons>
+     
+      <button ion-button icon-only (click)="goProfile()" float-end >
+        <ion-icon name="contact"></ion-icon>
+      </button>
+   </ion-buttons>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+
+      
+
+
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page fondo-cut">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+	<h1 text-center class="text-white" >Cartelera</h1>
+
+  <!-- <iframe width="380" height="315" allowfullscreen
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1">
+</iframe> -->
+<button ion-button (click)="notificaciones()">Notificacion</button>
+<ion-card *ngFor="let pelicula of peliculas"
+	(click)="goShow(pelicula)">
+    <img src="{{pelicula.image}}"/>
+    <div class="card-title">{{pelicula.title}}</div>
+    <div class="card-subtitle">{{pelicula.year}}</div>
+  </ion-card>
+
+   <div *ngIf="error">{{error}}</div>
+
+   <div *ngIf="status">{{status}}</div>
+
+
+
+</ion-content>

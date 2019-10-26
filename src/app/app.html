@@ -1,0 +1,45 @@
+
+<div *ngIf="showSplash" class="splash">
+	 <div class="spinner">
+		  <div class="double-bounce1"></div>
+		  <div class="double-bounce2"></div>
+	</div>
+</div>
+<ion-menu [content]="content"  >
+  <ion-header  >
+    <ion-toolbar >
+      <ion-title >Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="fondo-cut" menuClose >
+
+      <ion-item class="image" (click)="goProfile()">
+        
+      <div class="text-white">
+          
+          <ion-avatar>
+              <img src="https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/11880370_1060231210661615_6500303982536795316_n.jpg?_nc_cat=104&_nc_ht=scontent.fgdl3-1.fna&oh=695388b5ed4ae7ba79e6f7c02a12e27f&oe=5CA2E230">
+            </ion-avatar>
+            <h3 class="text-white ">Luis Francisco Rojas Diaz</h3>
+
+        </div>
+        <p class="text-white">214426868</p>
+    </ion-item>
+
+     
+    <ion-list > 
+      <button class="transparent" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" >
+        {{p.title}}
+      </button>
+    </ion-list>
+    <ion-list > 
+      <button menuClose ion-item class="red bottom"  >
+       Cerrar sesion
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

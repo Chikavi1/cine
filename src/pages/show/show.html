@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar color="fondo-cut">
+    <ion-title>{{pelicula.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo-cut">
+<ion-card>
+
+  <img src="{{pelicula.image}}">
+  <ion-fab right top>
+    <button ion-fab (click)="irAsientosPage()">
+      <ion-icon name="pricetags" ></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-item>
+    <h2 text-center>{{pelicula.title}}</h2>
+	<p text-justify text-wrap> {{pelicula.description}} </p>
+  </ion-item>
+
+  <ion-item>
+    <span item-start>{{pelicula.duration}} min</span>
+    <span item-start>({{pelicula.year}})</span>
+   
+  </ion-item>
+
+</ion-card>
+
+	<button ion-button
+			block
+			(click)="irAsientosPage()">
+		Selecciona tu lugar
+	</button>
+</ion-content>

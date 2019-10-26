@@ -1,0 +1,38 @@
+
+<ion-header >
+
+  <ion-navbar color="fondo-cut">
+    <ion-title>Selecciona tus asientos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="fondo-cut " >
+	<h2 class="text-white " text-center >Seleciona tus asientos</h2>
+<h3 class="text-white">Horarios</h3>
+	<ion-chip color=primary>
+	  <ion-label>10:00 - 12:30</ion-label>
+	</ion-chip>
+
+	<ion-chip color=primary>
+	  <ion-label>1:00 - 2:30</ion-label>
+	</ion-chip>
+	<img src="./assets/imgs/pantalla.png" alt="">
+	<tbody >
+		  <tr *ngFor="let row of asientos">
+
+		   <td *ngFor="let col of row" id="col-{{ col }}" (click)="caca2(col)" >
+		   		<img id="img{{col}}" src="./assets/imgs/default.png" alt="">
+		   	</td>
+		  </tr>
+
+	</tbody>
+		
+
+	<button ion-button
+			block
+			[disabled]="!isSelected"
+			(click)="identify()">
+	Siguiente
+	</button>
+	</ion-content>

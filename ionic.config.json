@@ -1,0 +1,7 @@
+{
+  "name": "CineCut",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

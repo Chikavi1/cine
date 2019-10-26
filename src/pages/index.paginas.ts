@@ -1,0 +1,14 @@
+	export { AsientosPage } from './asientos/asientos';
+	export { ShowPage } from './show/show';
+	export { ProfilePage } from './profile/profile';
+	export { TicketPage } from './ticket/ticket';
+	export { IntroduccionPage } from './introduccion/introduccion';		
+	export { HomePage } from './home/home';
+	export { LoginPage } from './login/login';
+	export { ListPage } from './list/list';
+	export { RegisterPage } from './register/register';
+	export { QrCodesPage } from './qr-codes/qr-codes';
+	export { InformationPage } from './information/information';
+	export {ShowQrcodePage} from './show-qrcode/show-qrcode';
+	export {DulceriaPage} from './dulceria/dulceria';
+	export {ListOnePage} from './list-one/list-one';
