@@ -65,7 +65,7 @@ music(){
 }
 
   notificaciones(){
-    uri = "http://www.cutonala.udg.mx/sites/default/files/cowspiracy_0.jpg";
+    let uri = "http://www.cutonala.udg.mx/sites/default/files/cowspiracy_0.jpg";
 
     this.localNotifications.schedule({
    title: "Aviso de pelicula",
