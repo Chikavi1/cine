@@ -73,7 +73,7 @@ music(){
    trigger: {at: new Date(new Date().getTime() + 3600)},
    led: 'FF0000',
    attachments: [uri],
-   sound: "assets/resources/sounds/definite.mp3",
+   sound: "file://assets/resources/sounds/definite.mp3",
    vibrate: true,
    autoClear: true,
    foreground: true
