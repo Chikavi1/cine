@@ -44,6 +44,7 @@
   <!-- <iframe width="380" height="315" allowfullscreen
 src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1">
 </iframe> -->
+<button ion-button (click)="music()">reproducir</button>
 <button ion-button (click)="notificaciones()">Notificacion</button>
 <ion-card *ngFor="let pelicula of peliculas"
 	(click)="goShow(pelicula)">

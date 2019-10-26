@@ -18,6 +18,10 @@ export class HomePage {
 	peliculas :any[];
   error: any[];
   status: any[];
+
+  audio = new Audio();
+
+
   constructor(public navCtrl: NavController,
   			public modalCtrl: ModalController,
   			public Movie: MoviesProvider,
@@ -51,15 +55,25 @@ export class HomePage {
     });
     alert.present();
   }
+music(){
 
+   this.audio.src = "assets/resources/sounds/definite.mp3";
+
+    this.audio.load();
+    this.audio.play();
+
+}
 
   notificaciones(){
+    uri = "http://www.cutonala.udg.mx/sites/default/files/cowspiracy_0.jpg";
+
     this.localNotifications.schedule({
    title: "Aviso de pelicula",
    text: 'la pelicula empieza en una hora',
    trigger: {at: new Date(new Date().getTime() + 3600)},
    led: 'FF0000',
-   sound: "file://assets/resources/sounds/definite.mp3",
+   attachments: [uri],
+   sound: "assets/resources/sounds/definite.mp3",
    vibrate: true,
    autoClear: true,
    foreground: true
